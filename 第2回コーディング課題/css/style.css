@@ -72,5 +72,10 @@ li:last-child {
   li {
     border-right: none;
     border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+  li:last-child {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
   }
 }
