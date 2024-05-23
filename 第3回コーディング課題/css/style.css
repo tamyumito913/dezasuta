@@ -41,7 +41,8 @@ p {
 @media screen and (max-width: 400px) {
   .container1 {
     flex-direction: column;
-    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
   }
   img {
     width: 100vw;
