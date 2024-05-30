@@ -22,12 +22,12 @@ ul {
   width: 1920px;
   height: 600px;
   object-fit: cover;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 
 .h2 {
   text-align: center;
-  margin-top: 60px;
+  margin: 60px auto 60px auto;
 }
 .h2 h2 {
   padding: 10px, 0;
@@ -35,7 +35,7 @@ ul {
 }
 .uline {
   padding-bottom: 10px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #383e45;
   display: inline-block;
 }
 .profile {
