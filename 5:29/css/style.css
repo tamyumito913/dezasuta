@@ -38,6 +38,7 @@ header {
   max-width: 1000px;
   text-align: center;
   margin: 97px auto 0 auto;
+  padding: 0 10px;
 }
 
 h2 img {
@@ -61,27 +62,27 @@ h2 img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
 }
 .left-img {
-  width: 500px;
-  height: 560px;
-  object-fit: cover;
-  border: bottom right radius 82px;
+  width: 50%;
+  height: auto;
+}
+.left-img img {
+  border-bottom-right-radius: 82px;
 }
 .About-text {
-  max-width: 418px;
+  max-width: 41%;
   margin-left: 80px;
   text-align: left;
 }
 .About-text img {
-  margin-bottom: 58px;
+  margin: 57px 0;
 }
 .About-text h3 {
   font-size: 44px;
   line-height: 1.4;
   font-weight: lighter;
-  margin-bottom: 53px;
+  margin-bottom: 23px;
 }
 .About-text p {
   font-size: 16px;
@@ -95,37 +96,43 @@ h2 img {
 .menu-wrap h2 {
   margin-bottom: 33px;
 }
+.menu-box {
+  width: 30%;
+}
 .menu1 {
   position: relative;
 }
 .menu-box img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 41px;
 }
 .menu-box h3 {
   position: absolute;
-  left: 10px;
-  top: 180px;
+  left: 4%;
+  top: 94%;
   color: #d30202;
   font-size: 38px;
   font-weight: lighter;
 }
 .menu-box p {
-  max-width: 300px;
+  max-width: 100%;
   text-align: left;
   font-size: 17px;
   line-height: 1.5;
   padding-top: 25px;
 }
 .gallery-wrap h2 {
-  margin-bottom: 33px;
+  max-width: 1000px;
+  text-align: center;
+  margin: 97px auto 33px auto;
 }
 .gallery {
   display: flex;
   justify-content: center;
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
+}
+.gallery img {
+  width: 20%;
 }
 
 .event-box {
@@ -142,7 +149,6 @@ h2 img {
   align-items: center;
   font-size: 23px;
   font-weight: lighter;
-  padding: 38px auto 38px 160px;
 }
 
 .event-title {
