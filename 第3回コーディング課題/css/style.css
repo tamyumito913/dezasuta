@@ -41,10 +41,10 @@ p {
 @media screen and (max-width: 400px) {
   .container1 {
     flex-direction: column;
-    max-width: 380px;
+    max-width: 300px;
     margin: 0 auto;
   }
   img {
-    width: 100vw;
+    width: 100%;
   }
 }

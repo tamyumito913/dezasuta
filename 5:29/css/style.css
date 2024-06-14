@@ -34,6 +34,90 @@ header {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
+.sp-nav,
+.sp-btn {
+  display: none;
+}
+@media screen and (max-width: 1100px) {
+  .pc-nav {
+    display: none;
+  }
+  /*ハンバーガー*/
+  .sp-btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 2;
+  }
+  .sp-btn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    /*位置の調整ー*/
+    position: relative;
+    top: 10px;
+    /*ボタンの変化*/
+    transition: 0.3s;
+  }
+  .sp-btn span::before,
+  .sp-btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    transition: 0.3s;
+  }
+  .sp-btn span::before {
+    bottom: 10px;
+  }
+  .sp-btn span::after {
+    top: 10px;
+  }
+  /*ばつ印*/
+  .sp-btn.open span {
+    background: transparent;
+  }
+  .sp-btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .sp-btn.open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  .sp-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+  .sp-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .sp-nav ul li {
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  }
+}
+
 .contents-wrap {
   max-width: 1000px;
   text-align: center;
@@ -58,16 +142,32 @@ h2 img {
   font-size: 23px;
   line-height: 1.7;
 }
+@media screen and (max-width: 767px) {
+  .catchcopy1 {
+    font-size: 17px;
+    margin-bottom: 58px;
+  }
+  .catchcopy2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 58px;
+  }
+  .catchcopy3 {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
 .About-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.left-img {
+.About-img {
   width: 50%;
   height: auto;
 }
-.left-img img {
+.About-img img {
   border-bottom-right-radius: 82px;
 }
 .About-text {
@@ -88,6 +188,22 @@ h2 img {
   font-size: 16px;
   line-height: 1.6;
   font-weight: lighter;
+}
+@media screen and (max-width: 767px) {
+  .About-wrap {
+    flex-direction: column;
+  }
+  .About-text {
+    max-width: 100%;
+    margin: 0 10px;
+    text-align: left;
+  }
+  .About-text h3 {
+    font-size: 36px;
+    line-height: 1.4;
+    font-weight: lighter;
+    margin-bottom: 23px;
+  }
 }
 .menu {
   display: flex;
@@ -122,6 +238,22 @@ h2 img {
   line-height: 1.5;
   padding-top: 25px;
 }
+@media screen and (max-width: 375px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .menu-box {
+    width: 85%;
+    margin-bottom: 60px;
+  }
+  .menu-box p {
+    padding-top: 53px;
+  }
+}
+
 .gallery-wrap h2 {
   max-width: 1000px;
   text-align: center;
@@ -134,13 +266,24 @@ h2 img {
 .gallery img {
   width: 20%;
 }
+@media screen and (max-width: 375px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery img {
+    width: 100%;
+  }
+}
 
 .event-box {
   background-color: #fff;
   border: 2px solid #4f260b;
 }
 .event-unit {
-  padding: 20px auto;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 .event-wrap h2 {
   margin-bottom: 33px;
@@ -148,15 +291,32 @@ h2 img {
 .event1 {
   display: flex;
   justify-content: flex-start;
-  margin: 30px 160px;
   align-items: center;
   font-size: 23px;
   font-weight: lighter;
+  padding-bottom: 20px;
+}
+.event1:last-child {
+  padding-bottom: 0;
 }
 
 .event-title {
   padding-left: 56px;
   text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  .event1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .event-title {
+    padding-left: 0px;
+  }
+  .event-unit {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 25px;
+  }
 }
 .access-wrap h2 {
   margin-bottom: 37px;
@@ -166,6 +326,7 @@ iframe {
   margin: 0 calc(50% - 50vw);
   height: 470px;
   display: block;
+  border: none;
 }
 footer {
   background-color: #fff;
@@ -196,4 +357,25 @@ small {
   position: fixed;
   right: 100px;
   bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .footer-wrap {
+    flex-direction: column;
+    padding: 38px 0;
+    margin-left: 28px;
+  }
+  .address {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  small {
+    padding-bottom: 34px;
+  }
+  .to_top {
+    width: 100px;
+    height: auto;
+    position: fixed;
+    right: 12px;
+    bottom: 205px;
+  }
 }
