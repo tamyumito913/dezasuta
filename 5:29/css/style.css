@@ -142,7 +142,17 @@ h2 img {
   font-size: 23px;
   line-height: 1.7;
 }
+@media screen and (max-width: 830px) {
+  .catchcopy2 {
+    font-size: 65px;
+  }
+}
 @media screen and (max-width: 767px) {
+  .contents-wrap {
+    text-align: center;
+    margin: 40px auto 0 auto;
+    padding: 0 10px;
+  }
   .catchcopy1 {
     font-size: 17px;
     margin-bottom: 58px;
@@ -193,16 +203,35 @@ h2 img {
   .About-wrap {
     flex-direction: column;
   }
+  .About-img {
+    width: 100%;
+    height: auto;
+  }
+  .About-img img {
+    border-bottom-right-radius: 0;
+  }
   .About-text {
-    max-width: 100%;
-    margin: 0 10px;
-    text-align: left;
+    display: contents;
+  }
+  .About-text img {
+    margin: 57px auto 17px auto;
+  }
+  .About-text h2 {
+    order: -1;
   }
   .About-text h3 {
     font-size: 36px;
+    text-align: left;
     line-height: 1.4;
     font-weight: lighter;
-    margin-bottom: 23px;
+    margin-top: 36px;
+    margin-bottom: 33px;
+  }
+  .About-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: lighter;
+    padding: 0 10px;
   }
 }
 .menu {
@@ -238,7 +267,7 @@ h2 img {
   line-height: 1.5;
   padding-top: 25px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
   .menu {
     flex-direction: column;
     align-items: center;
@@ -250,29 +279,37 @@ h2 img {
     margin-bottom: 60px;
   }
   .menu-box p {
-    padding-top: 53px;
+    padding-top: 40px;
   }
 }
 
 .gallery-wrap h2 {
   max-width: 1000px;
   text-align: center;
-  margin: 97px auto 33px auto;
+  margin: 37px auto 33px auto;
 }
 .gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .gallery img {
   width: 20%;
 }
-@media screen and (max-width: 375px) {
+.gallery-btn1,
+.gallery-btn2 {
+  display: none;
+}
+@media screen and (max-width: 767px) {
   .gallery {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap; /* フレックスアイテムの折り返しを無効にする */
+    overflow-x: auto;
+    /*flex-direction: column;
+    align-items: center;*/
   }
   .gallery img {
     width: 100%;
+    flex: 1 1 100%; /* 画像を全幅にする */
   }
 }
 
@@ -304,6 +341,7 @@ h2 img {
   padding-left: 56px;
   text-decoration: underline;
 }
+
 @media screen and (max-width: 767px) {
   .event1 {
     flex-direction: column;
