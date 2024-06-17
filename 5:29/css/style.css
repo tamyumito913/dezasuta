@@ -130,41 +130,41 @@ h2 img {
   height: 78px;
 }
 .catchcopy1 {
-  font-size: 30px;
+  font-size: 2.2vw;
   margin-bottom: 58px;
 }
 .catchcopy2 {
-  font-size: 82px;
+  font-size: 6vw;
   line-height: 1.2;
   margin-bottom: 58px;
 }
 .catchcopy3 {
-  font-size: 23px;
+  font-size: 1.7vw;
   line-height: 1.7;
 }
-@media screen and (max-width: 830px) {
-  .catchcopy2 {
-    font-size: 65px;
-  }
+.catchcopy3 .sp {
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .contents-wrap {
     text-align: center;
     margin: 40px auto 0 auto;
-    padding: 0 10px;
+    padding: 0 5px;
   }
   .catchcopy1 {
-    font-size: 17px;
-    margin-bottom: 58px;
+    font-size: 4.5vw;
+    margin-bottom: 40px;
   }
   .catchcopy2 {
-    font-size: 38px;
+    font-size: 10vw;
     line-height: 1.2;
-    margin-bottom: 58px;
   }
   .catchcopy3 {
-    font-size: 16px;
+    font-size: 4.2vw;
     line-height: 1.7;
+  }
+  .catchcopy3 .sp {
+    display: block;
   }
 }
 
@@ -219,7 +219,7 @@ h2 img {
     display: contents;
   }
   .About-text img {
-    margin: 57px auto 17px auto;
+    margin: 15px auto 17px auto;
   }
   .About-text h2 {
     order: -1;
@@ -277,12 +277,15 @@ h2 img {
   .menu {
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
   }
   .menu-box {
     width: 100%;
     margin-bottom: 60px;
+  }
+  .menu-box h3 {
+    font-size: 40px;
   }
   .menu-box p {
     padding-top: 40px;
@@ -321,7 +324,7 @@ h2 img {
 
 .event-box {
   background-color: #fff;
-  border: 2px solid #4f260b;
+  border: 3px solid #4f260b;
 }
 .event-unit {
   width: fit-content;
@@ -352,14 +355,18 @@ h2 img {
   .event1 {
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 30px;
   }
   .event1 p {
-    padding-left: 0px;
+    padding-left: 0;
+    text-align: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
   }
   .event-unit {
+    width: auto;
     padding: 25px;
   }
 }
@@ -372,6 +379,19 @@ iframe {
   height: 470px;
   display: block;
   border: none;
+}
+@media screen and (max-width: 767px) {
+  .access-wrap h2 {
+    margin-bottom: 20px;
+
+    iframe {
+      width: 100vw;
+      margin: 0 calc(50% - 50vw);
+      height: 375px;
+      display: block;
+      border: none;
+    }
+  }
 }
 footer {
   background-color: #fff;
