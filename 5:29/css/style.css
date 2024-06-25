@@ -38,6 +38,17 @@ header {
 .sp-btn {
   display: none;
 }
+/*スライダー*/
+.slick-dots {
+  bottom: 20px;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
 @media screen and (max-width: 1100px) {
   .pc-nav {
     display: none;
@@ -121,7 +132,7 @@ header {
 .contents-wrap {
   max-width: 1000px;
   text-align: center;
-  margin: 97px auto 0 auto;
+  margin: 5.4vw auto 0 auto;
   padding: 0 10px;
 }
 
@@ -131,12 +142,12 @@ h2 img {
 }
 .catchcopy1 {
   font-size: 2.2vw;
-  margin-bottom: 58px;
+  margin-bottom: 3.4vw;
 }
 .catchcopy2 {
   font-size: 6vw;
   line-height: 1.2;
-  margin-bottom: 58px;
+  margin-bottom: 3vw;
 }
 .catchcopy3 {
   font-size: 1.7vw;
@@ -148,12 +159,10 @@ h2 img {
 @media screen and (max-width: 767px) {
   .contents-wrap {
     text-align: center;
-    margin: 40px auto 0 auto;
     padding: 0 5px;
   }
   .catchcopy1 {
     font-size: 4.5vw;
-    margin-bottom: 40px;
   }
   .catchcopy2 {
     font-size: 10vw;
@@ -182,27 +191,22 @@ h2 img {
 }
 .About-text {
   max-width: 41%;
-  margin-left: 80px;
+  margin-left: 4.2vw;
   text-align: left;
 }
 .About-text img {
-  margin: 57px 0;
+  margin: 3vw 0;
 }
 .About-text h3 {
-  font-size: 44px;
+  font-size: 3.5vw;
   line-height: 1.4;
   font-weight: lighter;
-  margin-bottom: 23px;
+  margin-bottom: 1.2vw;
 }
 .About-text p {
   font-size: 16px;
   line-height: 1.6;
   font-weight: lighter;
-}
-@media screen and (max-width: 880px) {
-  .About-text h3 {
-    font-size: 38px;
-  }
 }
 @media screen and (max-width: 767px) {
   .About-wrap {
@@ -219,18 +223,17 @@ h2 img {
     display: contents;
   }
   .About-text img {
-    margin: 15px auto 17px auto;
+    margin: 2vw auto 2.2vw auto;
   }
   .About-text h2 {
     order: -1;
   }
   .About-text h3 {
-    font-size: 36px;
+    font-size: 9.6vw;
     text-align: left;
     line-height: 1.4;
     font-weight: lighter;
-    margin-top: 36px;
-    margin-bottom: 33px;
+    margin-top: 5vw;
     width: 100%;
   }
   .About-text p {
@@ -302,23 +305,48 @@ h2 img {
   flex-wrap: wrap;
   justify-content: center;
 }
-.gallery img {
-  width: 20%;
+.gallery a img {
+  width: 100%;
 }
 .gallery-btn1,
 .gallery-btn2 {
   display: none;
 }
+/*スライダー*/
+.slick-prev {
+  left: 22%;
+  z-index: 99;
+}
+.slick-prev:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  transform: rotate(-45deg);
+}
+.slick-next {
+  right: 22%;
+  z-index: 99;
+}
+.slick-next:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform: rotate(45deg);
+}
+.lb-data .lb-number {
+  display: none !important;
+}
+
 @media screen and (max-width: 767px) {
   .gallery {
-    flex-wrap: nowrap; /* フレックスアイテムの折り返しを無効にする */
-    overflow-x: auto;
-    /*flex-direction: column;
-    align-items: center;*/
-  }
-  .gallery img {
+    flex-direction: column;
     width: 100%;
-    flex: 1 1 100%; /* 画像を全幅にする */
   }
 }
 
