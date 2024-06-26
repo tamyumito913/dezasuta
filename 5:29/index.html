@@ -207,11 +207,24 @@
                 slidesToScroll: 1,
                 autoplay: true,
                 dots: false,
-            })
-            $('.gallery a ').lightbox.option({
-                resizeDuration: 200,
-            })
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: false
+                        }
+                    }
+                ]
+            });
         })
+
+        $('.gallery a ').lightbox.option({
+            resizeDuration: 200,
+        })
+
     </script>
 </body>
 

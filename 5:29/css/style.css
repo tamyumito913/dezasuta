@@ -342,11 +342,12 @@ h2 img {
 .lb-data .lb-number {
   display: none !important;
 }
-
 @media screen and (max-width: 767px) {
-  .gallery {
-    flex-direction: column;
-    width: 100%;
+  .slick-prev {
+    left: 3%;
+  }
+  .slick-next {
+    right: 3%;
   }
 }
 
